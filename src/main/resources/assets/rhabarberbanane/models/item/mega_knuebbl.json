@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "rhabarberbanane:item/knuebbl",
+	"textures": {
+		"layer0": "rhabarberbanane:item/mega_knuebbl"
+	}
+}

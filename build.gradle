@@ -1,5 +1,6 @@
 plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20-Beta'
 }
 
 
@@ -94,6 +95,7 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    mavenCentral()
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -108,6 +110,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -141,4 +144,14 @@ jar.finalizedBy('reobfJar')
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }

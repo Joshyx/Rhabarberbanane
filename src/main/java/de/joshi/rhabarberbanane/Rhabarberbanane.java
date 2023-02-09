@@ -2,6 +2,8 @@ package de.joshi.rhabarberbanane;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.Rarity;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -80,6 +82,11 @@ public class Rhabarberbanane {
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+        }
+        @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
+            itemRegistryEvent.getRegistry().registerAll(new KnockbackStick(15, Rarity.RARE).setRegistryName("knuebbl"));
+            itemRegistryEvent.getRegistry().registerAll(new KnockbackStick(20, Rarity.EPIC).setRegistryName("mega_knuebbl"));
         }
     }
 }
