@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "idi",
+    "cdc",
+    " k "
+  ],
+  "key":
+  {
+    "k":
+    {
+      "item": "rhabarberbanane:knuebbl"
+    },
+    "d":
+    {
+      "tag": "rhabarberbanane:ingots/dragon_steel_ingots"
+    },
+    "c":
+    {
+      "item": "upgradednetherite:corrupt_upgraded_netherite_ingot"
+    },
+    "i":
+    {
+      "item": "tconstruct:ichor_slime_sling"
+    }
+  },
+  "result":
+  {
+    "item": "rhabarberbanane:mega_knuebbl",
+    "count": 1
+  }
+}

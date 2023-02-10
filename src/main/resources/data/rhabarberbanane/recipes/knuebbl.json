@@ -1,0 +1,38 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern":
+  [
+    " b ",
+    "ses",
+    "srs",
+    "sts"
+  ],
+  "key":
+  {
+    "b":
+    {
+      "item": "tconstruct:blood_slime"
+    },
+    "e":
+    {
+      "item": "create:extendo_grip"
+    },
+    "r":
+    {
+      "item": "botania:rune_air"
+    },
+    "t":
+    {
+      "item": "tconstruct:tough_handle"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "rhabarberbanane:knuebbl",
+    "count": 1
+  }
+}
